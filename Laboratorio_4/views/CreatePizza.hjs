@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>
+        Pizzeria 
+    </title>
+</head>
+<body>
+<h3></h3>
+    Nombre de la Pizza: <input type="text" name="Nombre" id = "NombreP">
+     Tipo de Masa: <input type="text" name="TipoM" id = "TipoM">
+     Cantidad de Porciones: <input type="text" name="CantidadP" id = "CantidadP">
+     Tiene extra queso si/no: <input type="radio" name = "ExtraQ" id = "ExtraQ">
+     <br></br>
+     Descripcion de la pizza: <input type="text" name="Descripcion" id = "DescripcionP">
+      Ingredientes: <input type="text" name="Ingredientes" id = "Ingredientes">
+     <br></br>
+     <button> Ingresar Pizza </button>
+     </body>
+</html>
