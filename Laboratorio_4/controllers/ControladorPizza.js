@@ -15,22 +15,6 @@ pizzaController.list = function(req, res) {
   });
 };
 
-// Show pizza by id
-pizzaController.show = function(req, res) {
-  Pizza.findOne({_id: req.params.id}).exec(function (err, pizza) {
-    if (err) {
-      console.log("Error:", err);
-    }
-    else {
-      res.render("../views/pizzas/show", {pizza: pizza});
-    }
-  });
-};
-
-// Create new pizza
-pizzaController.create = function(req, res) {
-  res.render("../views/pizzas/create");
-};
 
 // Save new pizza
 pizzaController.save = function(req, res) {
@@ -39,10 +23,10 @@ pizzaController.save = function(req, res) {
   pizza.save(function(err) {
     if(err) {
       console.log(err);
-      res.render("../views/pizzas/create");
+      res.render("../views/Pizza");
     } else {
       console.log("Successfully created an pizza.");
-      res.redirect("/pizzas/show/"+pizza._id);
+      res.redirect("/show/"+pizza._id);
     }
   });
 };
@@ -54,7 +38,7 @@ pizzaController.edit = function(req, res) {
       console.log("Error:", err);
     }
     else {
-      res.render("../views/pizzas/edit", {pizza: pizza});
+      res.render("../views/edit", {pizza: pizza});
     }
   });
 };
@@ -64,9 +48,9 @@ pizzaController.update = function(req, res) {
   Pizza.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, address: req.body.address, position: req.body.position, salary: req.body.salary }}, { new: true }, function (err, pizza) {
     if (err) {
       console.log(err);
-      res.render("../views/pizzas/edit", {pizza: req.body});
+      res.render("../views/edit", {pizza: req.body});
     }
-    res.redirect("/pizzas/show/"+pizza._id);
+    res.redirect("/show/"+pizza._id);
   });
 };
 
