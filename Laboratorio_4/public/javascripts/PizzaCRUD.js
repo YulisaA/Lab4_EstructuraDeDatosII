@@ -1,4 +1,3 @@
-// guardar datos en una tabla 
 function guardar(){
     
      var _nom = document.getElementById("NombreP").value;
@@ -13,18 +12,13 @@ function guardar(){
      }
      var Ingredientes = document.getElementById("Ingredientes").value;
      var Descripcion = document.getElementById("DescripcionP").value;
-     var campo4 = document.createElement("input");
-     campo4.type = "button";
-     campo4.value = "Borrar Fila";
-     campo4.onclick = function() {
+     var Tamaño = document.getElementById("Tamaño").value;
   
-         tbody.removeChild(fila);
-         
-     }
-  
-     var fila="<tr><td>"+_nom+"</td><td>"+_tipo+"</td><td>"+Ingredientes+"</td><td>"+_cantidad+"</td><td>"+Queso+"</td><td>"+Descripcion+"</td><td>"+campo4+"</td></tr>";
+     var fila="<tr><td>"+_nom+"</td><td>"+_tipo+"</td><td>"+Ingredientes+"</td><td>"+_cantidad+"</td><td>"+Queso+"</td><td>"+Tamaño+"</td><td>"+Descripcion+"</td></tr>";
   
      var btn = document.createElement("TR");
       btn.innerHTML=fila;
      document.getElementById("tabla").appendChild(btn);
+
+     
   }

@@ -9,6 +9,6 @@
   <body>
     <h1>{{ title }}</h1>
     <button> Serie I (JWT) </button>
-    <button type = "submit" onclick = "location='/Pizzeria'" > Serie II </button>
+    <button type = "submit" onclick = "location='/Pizzeria'" > Pizzeria </button>
   </body>
 </html>

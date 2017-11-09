@@ -17,7 +17,7 @@ button {
     display: inline-block;
     font-size: 16px;
 }
-table, td, th {
+.table, td, th {
             border-collapse: collapse;
             border: 2px solid orange;
             padding:20px;

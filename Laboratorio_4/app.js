@@ -4,10 +4,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://localhost/pizzas')
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var Pizzeria = require('./routes/Pizzeria');
+
+
+
 
 
 var app = express();
