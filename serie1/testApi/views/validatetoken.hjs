@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Token</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <script src="/javascripts/validatetoken.js"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+       <h1>{{title}}</h1>
+       <div class="panel panel-default">
+        <div class="panel-heading">
+            <form method="post" action="/validatetoken">
+                Clave: <br>
+                <input type="text" name="password" id="password" value ='{{myKey}}'><br>
+                Contenido: <br>
+                <textarea rows=2 cols=50 name="jsonContent" id="jsonContent" >{{content}}</textarea><p>
+                <button name="generateJ" class="btn btn-success" type="submit">Generar token</button><br>
+                <br>
+                Token generado: <br>
+                <textarea id = "output" rows=4 cols=50 readonly>{{tokenValue}}</textarea>
+            </form>  
+        </div>    
+  </div>     
+       
+    </body>
+</html>
