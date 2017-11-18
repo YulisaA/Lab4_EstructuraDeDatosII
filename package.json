@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Desarrollo de APIs",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YulisaA/Lab4_EstructuraDeDatosII.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YulisaA/Lab4_EstructuraDeDatosII/issues"
+  },
+  "homepage": "https://github.com/YulisaA/Lab4_EstructuraDeDatosII#readme"
+}
